@@ -4,89 +4,194 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Academic profile of Anh Tuan LE, a mechanics and materials researcher working on silicon electrodes and fibre-reinforced composites.">
-  <title>Anh Tuan LE | Mechanics and materials research</title>
+  <title>Anh Tuan LE | Mechanics and Materials Science</title>
   <style>
     :root {
-      color-scheme: light;
-      --paper: #f8f7f2;
-      --white: #fffefa;
-      --ink: #142e30;
-      --muted: #466062;
-      --teal: #12645c;
-      --line: #d5dfd8;
-      --mint: #d9eee4;
-      --dark: #142f31;
-      --serif: Cambria, Georgia, "Times New Roman", serif;
+      color-scheme: light dark;
+      --paper: #f8f4eb;
+      --surface: #fffdf8;
+      --tint: #e8ece1;
+      --ink: #282b24;
+      --muted: #4e584a;
+      --accent: #315845;
+      --focus: #974523;
+      --line: #ccd2c5;
+      --sans: "Century Gothic", "URW Gothic", "Trebuchet MS", sans-serif;
+      --serif: Garamond, "Times New Roman", serif;
     }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #171c18;
+        --surface: #212922;
+        --tint: #252e27;
+        --ink: #f5efe3;
+        --muted: #c8cbbb;
+        --accent: #a7cfb3;
+        --focus: #f0bf98;
+        --line: #48584c;
+      }
+    }
+
     * { box-sizing: border-box; }
     html { scroll-padding-top: 1.25rem; }
+
     body {
       margin: 0;
       background: var(--paper);
       color: var(--ink);
-      font: 1rem/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+      font: 1rem/1.65 var(--sans);
     }
-    a { color: var(--teal); text-underline-offset: .2em; }
-    a:hover { text-decoration-thickness: .14em; }
-    :focus-visible { outline: 3px solid #ab542c; outline-offset: 4px; }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: .2em;
+    }
+
+    a:hover { text-decoration-thickness: .12em; }
+
+    :focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 4px;
+    }
+
     h1, h2, h3, h4, p { margin: 0; }
     .wrap { width: min(100% - 3rem, 68rem); margin-inline: auto; }
-    .skip { position: absolute; left: 1rem; top: .5rem; transform: translateY(-200%); }
-    .skip:focus { transform: none; background: var(--white); z-index: 2; padding: .5rem 1rem; }
-    .site-header { background: var(--white); border-bottom: 1px solid var(--line); }
+
+    .skip {
+      position: absolute;
+      top: .5rem;
+      left: 1rem;
+      transform: translateY(-200%);
+    }
+
+    .skip:focus {
+      transform: none;
+      background: var(--surface);
+      padding: .5rem 1rem;
+      z-index: 2;
+    }
+
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+
     .site-header .wrap, .site-footer .wrap {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: .45rem 1.5rem;
+      gap: .65rem 1.5rem;
       padding-block: 1rem;
     }
-    .brand { font: 600 1.25rem var(--serif); text-decoration: none; color: var(--ink); }
+
+    .brand {
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
     .nav-links, .profile-links, .item-links {
       display: flex;
       flex-wrap: wrap;
-      gap: .45rem 1.25rem;
+      gap: .45rem 1.1rem;
       padding: 0;
       margin: 0;
       list-style: none;
     }
-    .nav-links a { color: var(--ink); text-decoration: none; font-size: .89rem; }
+
+    .nav-links a {
+      color: var(--ink);
+      font-size: .9rem;
+      text-decoration: none;
+    }
+
     .nav-links a:hover { text-decoration: underline; }
-    .hero { color: var(--white); background: var(--dark); }
-    .hero-inner {
-      display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-      align-items: center;
-      gap: 2.5rem;
-      padding-block: clamp(3rem, 7vw, 6rem);
-    }
-    .eyebrow {
-      color: var(--teal);
-      font-weight: 700;
-      font-size: .74rem;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
-    .hero .eyebrow { color: #aee6cf; }
-    h1 { font: 400 clamp(3.15rem, 7.6vw, 6rem)/1.05 var(--serif); letter-spacing: -.035em; margin: .55rem 0 1.1rem; }
-    .intro { max-width: 52ch; color: #e1eae6; font-size: clamp(1.03rem, 2vw, 1.23rem); }
-    .profile-links { margin-top: 1.45rem; }
-    .profile-links a { color: #bdedda; font-size: .93rem; font-weight: 600; }
-    .hero-art { width: 100%; height: auto; display: block; }
-    .section {
-      display: grid;
-      grid-template-columns: minmax(10rem, 1fr) minmax(0, 3fr);
-      gap: 2rem;
-      padding-block: clamp(2.4rem, 5.5vw, 4.5rem);
+
+    .hero {
+      background: var(--tint);
       border-bottom: 1px solid var(--line);
     }
-    .section-title { margin-top: .25rem; font: 400 clamp(1.8rem, 3.6vw, 2.65rem)/1.09 var(--serif); letter-spacing: -.035em; }
-    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-    .card { padding: 1.25rem; background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--teal); }
-    .card h3 { font: 400 1.45rem/1.2 var(--serif); margin: .4rem 0 .6rem; }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+      align-items: center;
+      gap: clamp(1.5rem, 5vw, 4rem);
+      padding-block: clamp(2.5rem, 6vw, 5rem);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    h1 {
+      margin: .4rem 0 1rem;
+      font: 600 clamp(2.6rem, 6vw, 5rem)/1.08 var(--sans);
+      letter-spacing: -.04em;
+    }
+
+    .intro { max-width: 64ch; }
+    .intro + .intro { margin-top: .75rem; }
+
+    .profile-links {
+      margin-top: 1.25rem;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    .hero-photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 25rem;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+      justify-self: end;
+      border: 1px solid var(--line);
+      border-radius: .75rem;
+    }
+
+    .section {
+      display: grid;
+      grid-template-columns: minmax(11rem, 1fr) minmax(0, 3fr);
+      gap: 2rem;
+      padding-block: clamp(2.25rem, 5vw, 4rem);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-title {
+      font: 600 clamp(1.65rem, 3vw, 2.15rem)/1.2 var(--sans);
+      letter-spacing: -.025em;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      padding: 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--accent);
+    }
+
+    .card h3 { margin: .35rem 0 .65rem; font-size: 1.2rem; }
     .card p + p { margin-top: .75rem; }
-    .timeline, .publications, .conferences { margin: 0; padding: 0; list-style: none; }
+
+    .timeline, .publications, .conferences {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
     .timeline li {
       display: grid;
       grid-template-columns: minmax(6rem, 7.25rem) minmax(0, 1fr);
@@ -94,38 +199,69 @@
       padding: .9rem 0;
       border-bottom: 1px solid var(--line);
     }
+
     .timeline li:first-child { padding-top: 0; }
-    .timeline li:last-child { padding-bottom: 0; border-bottom: 0; }
-    .date { font-size: .9rem; color: var(--teal); font-weight: 700; }
+
+    .timeline li:last-child, .publications li:last-child, .conferences li:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .date {
+      color: var(--accent);
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
     .timeline h3, .publications h4 { font-size: 1.035rem; line-height: 1.45; }
     .detail { color: var(--muted); font-size: .95rem; }
-    .subheading { font: 400 1.55rem/1.2 var(--serif); margin-bottom: .55rem; }
-    .conferences-heading { margin-top: 2rem; }
-    .publications li, .conferences li { padding: .95rem 0; border-bottom: 1px solid var(--line); }
-    .publications li:last-child, .conferences li:last-child { border-bottom: 0; padding-bottom: 0; }
-    .publications .detail { margin-top: .15rem; }
-    .item-links { margin-top: .4rem; gap: .3rem 1rem; }
-    .item-links a { font-size: .88rem; font-weight: 650; }
-    .thesis-panel { background: var(--mint); padding: clamp(1.2rem, 3vw, 2rem); }
-    .thesis-panel h3 { font: 400 clamp(1.4rem, 3vw, 1.9rem)/1.25 var(--serif); margin: .35rem 0 .65rem; }
-    .thesis-panel p + p { margin-top: .65rem; }
-    .site-footer { color: var(--muted); font-size: .9rem; }
-    @media (max-width: 48rem) {
-      .section { grid-template-columns: 1fr; gap: 1.15rem; }
-      .hero-inner { grid-template-columns: minmax(0, 1fr) minmax(0, .55fr); gap: 1rem; }
+
+    .subheading {
+      margin-bottom: .5rem;
+      font: 600 1.2rem/1.3 var(--sans);
     }
+
+    .subheading-spaced { margin-top: 1.75rem; }
+
+    .publications li, .conferences li {
+      padding: .95rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .publications .detail { margin-top: .15rem; }
+    .item-links { margin-top: .4rem; }
+    .item-links a { font-size: .9rem; font-weight: 700; }
+
+    .thesis-panel {
+      background: var(--tint);
+      padding: clamp(1.2rem, 3vw, 2rem);
+    }
+
+    .thesis-panel h3 {
+      margin: .55rem 0;
+      font: 600 clamp(1.35rem, 2.8vw, 1.8rem)/1.25 var(--serif);
+    }
+
+    .thesis-panel p + p { margin-top: .75rem; }
+    .site-footer { color: var(--muted); font-size: .9rem; }
+
+    @media (max-width: 48rem) {
+      .hero-inner, .section { grid-template-columns: 1fr; }
+      .section { gap: 1.15rem; }
+      .hero-photo { justify-self: start; }
+    }
+
     @media (max-width: 34rem) {
       .wrap { width: calc(100% - 2rem); }
-      .hero-inner, .cards { grid-template-columns: 1fr; }
-      h1 { font-size: clamp(2.5rem, 10vw, 3.3rem); }
-      .hero-art { display: none; }
+      .cards, .timeline li { grid-template-columns: 1fr; }
       .nav-links { column-gap: .85rem; }
-      .timeline li { grid-template-columns: 1fr; }
     }
   </style>
 </head>
+
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="#top">Anh Tuan LE</a>
@@ -136,6 +272,7 @@
           <li><a href="#publications">Publications</a></li>
           <li><a href="#teaching">Teaching</a></li>
           <li><a href="#thesis">Thesis</a></li>
+          <li><a href="#certifications">Certifications</a></li>
         </ul>
       </nav>
     </div>
@@ -145,101 +282,98 @@
     <div class="hero">
       <div class="wrap hero-inner">
         <div>
-          <p class="eyebrow">Mechanics &amp; materials science</p>
+          <p class="eyebrow">Mechanics and Materials Science</p>
           <h1>Anh Tuan LE</h1>
-          <p class="intro">I study how materials respond to mechanical loading, from silicon electrodes during battery cycling to fibre-reinforced composites. My work combines materials processing, mechanical characterisation and operando experiments.</p>
+          <p class="intro">
+            I am seeking a postdoctoral opportunity in an international, interdisciplinary research environment.
+            At École Polytechnique in France, I developed experimental expertise in electro-chemo-mechanical
+            coupling by cycling lithium-ion half-cells while applying mechanical loads to their silicon electrodes.
+          </p>
+          <p class="intro">
+            My doctoral research examined how processing and microstructure influence the mechanical properties
+            of nanostructured composites. I aim to build on this experience through further postdoctoral research
+            and pursue a long-term academic career.
+          </p>
           <ul class="profile-links" aria-label="Professional profiles">
             <li><a href="https://orcid.org/0000-0003-1596-5465">ORCID</a></li>
-            <li><a href="https://cv.hal.science/anh-tuan-le">HAL</a></li>
+            <li><a href="https://cv.hal.science/anh-tuan-le">French Open Archive</a></li>
             <li><a href="https://www.researchgate.net/profile/Anh-Tuan-Le-8">ResearchGate</a></li>
             <li><a href="https://www.linkedin.com/in/anh-tuan-le/">LinkedIn</a></li>
           </ul>
         </div>
-        <svg class="hero-art" viewBox="0 0 340 272" aria-hidden="true" focusable="false">
-          <defs>
-            <pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse">
-              <path d="M18 0H0V18" fill="none" stroke="#527474" stroke-opacity=".46"/>
-            </pattern>
-          </defs>
-          <rect x="1" y="1" width="338" height="270" rx="7" fill="url(#grid)" stroke="#527474"/>
-          <g stroke-linejoin="round">
-            <path d="M51 166L198 204 294 148V171L198 227 51 188Z" fill="#254c4e" stroke="#86a9a2"/>
-            <path d="M51 166L147 110 294 148 198 204Z" fill="#335c5c" stroke="#86a9a2"/>
-            <path d="M51 136L198 173 294 117V137L198 193 51 156Z" fill="#2c6661" stroke="#aee6cf"/>
-            <path d="M51 136L147 80 294 117 198 173Z" fill="#417b71" stroke="#aee6cf"/>
-            <path d="M51 105L147 49 294 86 198 142Z" fill="#aee6cf" fill-opacity=".14" stroke="#aee6cf"/>
-            <path d="M80 113L176 57M109 120L205 64M138 127L234 71M168 135L264 79M75 91L222 128M99 77L246 114M123 63L270 100" stroke="#aee6cf" stroke-opacity=".7"/>
-          </g>
-          <g fill="#e9b98e">
-            <circle cx="105" cy="76" r="4"/>
-            <circle cx="153" cy="87" r="4"/>
-            <circle cx="194" cy="110" r="4"/>
-            <circle cx="247" cy="98" r="4"/>
-          </g>
-        </svg>
+        <img class="hero-photo" src="./2020-03-13-belle-photo-changee-capturee.PNG"
+             alt="Portrait of Anh Tuan LE" width="757" height="516">
       </div>
     </div>
 
     <div class="wrap">
       <section class="section" id="research" aria-labelledby="research-title">
-        <div>
-          <p class="eyebrow" aria-hidden="true">01</p>
-          <h2 class="section-title" id="research-title">Research</h2>
-        </div>
+        <h2 class="section-title" id="research-title">Research</h2>
         <div class="cards">
           <article class="card">
             <p class="eyebrow">Electro-chemo-mechanics</p>
             <h3>Silicon electrodes</h3>
-            <p>At the Laboratoire de Mécanique des Solides, I combined electrochemical cycling with operando mechanical loading to investigate how stress affects the electrochemical response of amorphous silicon electrodes in lithium-ion half-cells.</p>
+            <p>
+              At the Laboratoire de Mécanique des Solides, I applied mechanical loads during electrochemical
+              cycling and used operando measurements to investigate how stress affects the electrochemical
+              response of amorphous silicon electrodes in lithium-ion half-cells.
+            </p>
             <p><a href="https://doi.org/10.1016/j.jmps.2025.106421">Read the journal article</a></p>
           </article>
+
           <article class="card">
-            <p class="eyebrow">Processing &amp; fracture</p>
+            <p class="eyebrow">Processing and fracture</p>
             <h3>Fibre-reinforced composites</h3>
-            <p>During my doctorate, I studied how to integrate vertically aligned carbon nanotubes into continuous-fibre laminates and how that manufacturing process affects interlaminar fracture behaviour.</p>
+            <p>
+              During my doctorate, I studied how to integrate vertically aligned carbon nanotubes into
+              continuous-fibre laminates and how that manufacturing process affects interlaminar fracture behaviour.
+            </p>
             <p><a href="#thesis">Explore the doctoral thesis</a></p>
           </article>
         </div>
       </section>
 
       <section class="section" id="background" aria-labelledby="background-title">
-        <div>
-          <p class="eyebrow" aria-hidden="true">02</p>
-          <h2 class="section-title" id="background-title">Academic background</h2>
-        </div>
+        <h2 class="section-title" id="background-title">Academic background</h2>
         <div>
           <ul class="timeline">
             <li>
               <span class="date">2022–2025</span>
-              <div><h3>Postdoctoral researcher</h3><p class="detail">Laboratoire de Mécanique des Solides, École Polytechnique</p></div>
+              <div>
+                <h3>Postdoctoral researcher</h3>
+                <p class="detail">Laboratoire de Mécanique des Solides, École Polytechnique, France</p>
+              </div>
             </li>
             <li>
               <span class="date">2017–2021</span>
-              <div><h3>PhD in mechanics and materials science</h3><p class="detail">Institut Clément Ader, IMT Mines Albi</p></div>
-            </li>
-            <li>
-              <span class="date">2017</span>
-              <div><h3>Master’s research internship</h3><p class="detail">Université Claude Bernard Lyon 1 · Curing conditions and the mechanical behaviour of bonded carbon fibre-reinforced polymer and concrete joints</p></div>
+              <div>
+                <h3>PhD in Mechanics and Materials Science</h3>
+                <p class="detail">Institut Clément Ader, IMT Mines Albi, France</p>
+              </div>
             </li>
             <li>
               <span class="date">2015–2017</span>
-              <div><h3>Master’s degree in materials and structures for sustainable construction</h3><p class="detail">Université Claude Bernard Lyon 1</p></div>
+              <div>
+                <h3>Master’s degree in Materials and Structures for Sustainable Construction</h3>
+                <p class="detail">Université Claude Bernard Lyon 1, France</p>
+              </div>
             </li>
             <li>
               <span class="date">2012–2015</span>
-              <div><h3>Bachelor’s degree in mechanics and civil engineering</h3><p class="detail">Université Claude Bernard Lyon 1</p></div>
+              <div>
+                <h3>Bachelor’s degree in Mechanics and Civil Engineering</h3>
+                <p class="detail">Université Claude Bernard Lyon 1, France</p>
+              </div>
             </li>
           </ul>
-          <h3 class="subheading conferences-heading">Academic service and training</h3>
-          <p>Student expert for Hcéres evaluations of programmes, institutions and doctoral programmes (2017–2023). MathWorks training in machine learning (2025) and deep learning for image applications (2026).</p>
+
+          <h3 class="subheading subheading-spaced">Academic service</h3>
+          <p>Student expert for Hcéres evaluations of programmes, institutions and doctoral programmes (2017–2023).</p>
         </div>
       </section>
 
       <section class="section" id="publications" aria-labelledby="publications-title">
-        <div>
-          <p class="eyebrow" aria-hidden="true">03</p>
-          <h2 class="section-title" id="publications-title">Publications</h2>
-        </div>
+        <h2 class="section-title" id="publications-title">Publications</h2>
         <div>
           <h3 class="subheading">Journal articles</h3>
           <ol class="publications">
@@ -247,35 +381,49 @@
               <h4>Stress dependence of the chemical potential of lithium in a silicon electrode</h4>
               <p class="detail">A. T. Le, X. Bruant, N. T. Phung, F. Ozanam, M. Rosso and L. Guin</p>
               <p class="detail"><i>Journal of the Mechanics and Physics of Solids</i>, 207, 106421 (2026)</p>
-              <p class="item-links"><a href="https://doi.org/10.1016/j.jmps.2025.106421" aria-label="DOI for Stress dependence of the chemical potential">DOI</a><a href="https://hal.science/hal-05100772" aria-label="HAL record for Stress dependence of the chemical potential">Open archive</a></p>
+              <p class="item-links">
+                <a href="https://doi.org/10.1016/j.jmps.2025.106421" aria-label="DOI for Stress dependence of the chemical potential">DOI</a>
+                <a href="https://polytechnique.hal.science/hal-05100772/" aria-label="Open archive for Stress dependence of the chemical potential">Open archive</a>
+              </p>
             </li>
             <li>
               <h4>Composite laminates reinforced by vertically aligned carbon nanotubes: Detailed manufacturing process, from nanotubes transfer to composite consolidation</h4>
               <p class="detail">A. T. Le, Q. Govignon, S. Rivallant and T. Cutard</p>
               <p class="detail"><i>Journal of Composite Materials</i>, 57(27), 4239–4253 (2023)</p>
-              <p class="item-links"><a href="https://doi.org/10.1177/00219983231207441" aria-label="DOI for Composite laminates reinforced by vertically aligned carbon nanotubes">DOI</a><a href="https://hal.science/hal-04230095" aria-label="HAL record for Composite laminates reinforced by vertically aligned carbon nanotubes">Open archive</a></p>
+              <p class="item-links">
+                <a href="https://doi.org/10.1177/00219983231207441" aria-label="DOI for Composite laminates reinforced by vertically aligned carbon nanotubes">DOI</a>
+                <a href="https://imt-mines-albi.hal.science/hal-04230095" aria-label="Open archive for Composite laminates reinforced by vertically aligned carbon nanotubes">Open archive</a>
+              </p>
             </li>
             <li>
               <h4>Mode I and mode II fracture behavior in nano-engineered long fiber reinforced composites</h4>
               <p class="detail">A. T. Le, Q. Govignon, S. Rivallant and T. Cutard</p>
               <p class="detail"><i>Polymer Composites</i>, 44(7), 4016–4026 (2023)</p>
-              <p class="item-links"><a href="https://doi.org/10.1002/pc.27374" aria-label="DOI for Mode I and mode II fracture behavior">DOI</a><a href="https://hal.science/hal-04081911" aria-label="HAL record for Mode I and mode II fracture behavior">Open archive</a></p>
+              <p class="item-links">
+                <a href="https://doi.org/10.1002/pc.27374" aria-label="DOI for Mode I and mode II fracture behavior">DOI</a>
+                <a href="https://imt-mines-albi.hal.science/hal-04081911" aria-label="Open archive for Mode I and mode II fracture behavior">Open archive</a>
+              </p>
             </li>
             <li>
               <h4>Nano-engineered prepreg manufacturing: control of capillary rise of resin into VACNTs’ forests</h4>
               <p class="detail">A. T. Le, Q. Govignon, S. Rivallant and T. Cutard</p>
               <p class="detail"><i>Carbon Letters</i>, 33(4), 1019–1025 (2023)</p>
-              <p class="item-links"><a href="https://doi.org/10.1007/s42823-023-00495-2" aria-label="DOI for Nano-engineered prepreg manufacturing">DOI</a><a href="https://hal.science/hal-04038875" aria-label="HAL record for Nano-engineered prepreg manufacturing">Open archive</a></p>
+              <p class="item-links">
+                <a href="https://doi.org/10.1007/s42823-023-00495-2" aria-label="DOI for Nano-engineered prepreg manufacturing">DOI</a>
+                <a href="https://imt-mines-albi.hal.science/hal-04038875" aria-label="Open archive for Nano-engineered prepreg manufacturing">Open archive</a>
+              </p>
             </li>
             <li>
               <h4>Influence of curing conditions on mechanical behaviour of glued joints of carbon fibre-reinforced polymer composite/concrete</h4>
               <p class="detail">A. T. Lee, M. Michel, E. Ferrier and B. Benmokrane</p>
               <p class="detail"><i>Construction and Building Materials</i>, 227, 116385 (2019)</p>
-              <p class="item-links"><a href="https://doi.org/10.1016/j.conbuildmat.2019.07.111" aria-label="DOI for Influence of curing conditions on mechanical behaviour of glued joints">DOI</a></p>
+              <p class="item-links">
+                <a href="https://doi.org/10.1016/j.conbuildmat.2019.07.111" aria-label="DOI for Influence of curing conditions on mechanical behaviour of glued joints">DOI</a>
+              </p>
             </li>
           </ol>
 
-          <h3 class="subheading conferences-heading">Conference presentations and proceedings</h3>
+          <h3 class="subheading subheading-spaced">Conference presentations and proceedings</h3>
           <ul class="conferences">
             <li>
               <a href="https://esmc2025.sciencesconf.org/593259">Effect of Stresses with Different Triaxiality Ratios on the Electrochemical Response of Silicon Electrodes</a>
@@ -286,11 +434,11 @@
               <p class="detail">243rd ECS Meeting · Boston, USA · 2023</p>
             </li>
             <li>
-              <span>Effect of stress on the electrochemical response of amorphous silicon electrodes</span>
+              <p>Effect of stress on the electrochemical response of amorphous silicon electrodes</p>
               <p class="detail">12th Battery Day in Île-de-France · 2023</p>
             </li>
             <li>
-              <a href="https://hal.science/hal-02424001v1" lang="fr">Imprégnation et transfert de tapis de nanotubes de carbone alignés verticalement sur du préimprégné</a>
+              <a href="https://imt-mines-albi.hal.science/hal-02424001v1" lang="fr">Imprégnation et transfert de tapis de nanotubes de carbone alignés verticalement sur du préimprégné</a>
               <p class="detail">21es Journées Nationales sur les Composites · Bordeaux, France · 2019</p>
             </li>
           </ul>
@@ -298,48 +446,94 @@
       </section>
 
       <section class="section" id="teaching" aria-labelledby="teaching-title">
-        <div>
-          <p class="eyebrow" aria-hidden="true">04</p>
-          <h2 class="section-title" id="teaching-title">Teaching</h2>
-        </div>
+        <h2 class="section-title" id="teaching-title">Teaching</h2>
         <ul class="timeline">
           <li>
             <span class="date">From 2022</span>
-            <div><h3>École Polytechnique</h3><p class="detail">Practical sessions for first-year bachelor’s students in Discovery Lab (96 hours) and second-year bachelor’s students in Advanced Lab (32 hours).</p></div>
+            <div>
+              <h3>École Polytechnique</h3>
+              <p class="detail">Practical sessions for first-year bachelor’s students in Discovery Lab (96 hours) and second-year bachelor’s students in Advanced Lab (32 hours).</p>
+            </div>
           </li>
           <li>
             <span class="date">From 2022</span>
-            <div><h3>Polytech Sorbonne</h3><p class="detail">Structural vibrations tutorials for engineering students (16 hours).</p></div>
+            <div>
+              <h3>Polytech Sorbonne</h3>
+              <p class="detail">Structural vibrations tutorials for engineering students (16 hours).</p>
+            </div>
           </li>
           <li>
             <span class="date">2017–2021</span>
-            <div><h3>IMT Mines Albi</h3><p class="detail">Engineering tutorials in strength of materials, additive manufacturing and structural properties of materials (40 hours).</p></div>
+            <div>
+              <h3>IMT Mines Albi</h3>
+              <p class="detail">Engineering tutorials in strength of materials, additive manufacturing and structural properties of materials (40 hours).</p>
+            </div>
           </li>
           <li>
             <span class="date">2016–2017</span>
-            <div><h3>Université Claude Bernard Lyon 1</h3><p class="detail">Physics teaching assistant (62 hours).</p></div>
+            <div>
+              <h3>Université Claude Bernard Lyon 1</h3>
+              <p class="detail">Physics teaching assistant (62 hours).</p>
+            </div>
           </li>
         </ul>
       </section>
 
       <section class="section" id="thesis" aria-labelledby="thesis-title">
-        <div>
-          <p class="eyebrow" aria-hidden="true">05</p>
-          <h2 class="section-title" id="thesis-title">Doctoral thesis</h2>
-        </div>
+        <h2 class="section-title" id="thesis-title">Doctoral thesis</h2>
         <article class="thesis-panel">
-          <p class="eyebrow">IMT Mines Albi · 2021</p>
-          <h3 lang="fr">Élaboration et caractérisation du comportement mécanique de composites stratifiés à matrice organique avec tapis de nanotubes verticalement alignés</h3>
-          <p>My thesis examined how to manufacture laminates reinforced with vertically aligned carbon nanotubes and how their incorporation affects the mechanical behaviour of the composite.</p>
-          <p class="item-links"><a href="https://theses.fr/2021EMAC0014">Thesis record</a><a href="https://theses.hal.science/tel-03578980v1/document">Read the full thesis on HAL</a></p>
+          <p class="eyebrow">IMT Mines Albi, France · 2021</p>
+          <h3>Manufacturing and mechanical characterization of Vertically Aligned Carbon NanoTubes enhanced continuous fibre reinforced polymer composites</h3>
+          <p lang="fr">Élaboration et caractérisation du comportement mécanique de composites stratifiés à matrice organique avec tapis de nanotubes verticalement alignés</p>
+          <p>
+            My thesis examined how to manufacture laminates reinforced with vertically aligned carbon
+            nanotubes and how their incorporation affects the mechanical behaviour of the composite.
+          </p>
+          <p class="item-links">
+            <a href="https://doi.org/10.70675/c91f7479za281z4ca1z9878z6303f69614a6">Thesis record</a>
+            <a href="https://theses.hal.science/tel-03578980v1/document">Read the full thesis on HAL</a>
+          </p>
         </article>
+      </section>
+
+      <section class="section" id="certifications" aria-labelledby="certifications-title">
+        <h2 class="section-title" id="certifications-title">Certifications</h2>
+        <ul class="timeline">
+          <li>
+            <time class="date" datetime="2026-02">February 2026</time>
+            <div>
+              <h3>Deep Learning Techniques in MATLAB for Image Applications</h3>
+              <p class="detail">MathWorks</p>
+              <p class="item-links">
+                <a href="https://matlabacademy.mathworks.com/progress/share/learningpath/certificate.html?id=693ae003-3eb2-43a2-b758-bc06033fb679">View deep learning certificate</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <time class="date" datetime="2025-02">February 2025</time>
+            <div>
+              <h3>Machine Learning Techniques in MATLAB</h3>
+              <p class="detail">MathWorks</p>
+              <p class="item-links">
+                <a href="https://matlabacademy.mathworks.com/progress/share/learningpath/certificate.html?id=25051a13-e3e7-4bc5-865c-d6a54715b018">View machine learning certificate</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <time class="date" datetime="2022-12">December 2022</time>
+            <div>
+              <h3>C1 Advanced</h3>
+              <p class="detail">Cambridge University Press &amp; Assessment English</p>
+            </div>
+          </li>
+        </ul>
       </section>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>Anh Tuan LE · Academic profile</p>
+      <p>Anh Tuan LE</p>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
