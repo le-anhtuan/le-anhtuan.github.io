@@ -144,6 +144,10 @@
       font-weight: 700;
     }
 
+    .profile-links a { display: inline-flex; align-items: center; font-size: 1.35rem; }
+    .cv-link { margin-top: .6rem; font-size: .9rem; font-weight: 700; }
+    .cv-link a { display: inline-flex; align-items: center; gap: .35rem; }
+
     .hero-portrait {
       position: relative;
       width: 100%;
@@ -266,6 +270,7 @@
       .nav-links { column-gap: .85rem; }
     }
   </style>
+  <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js" defer></script>
 </head>
 
 <body id="top">
@@ -304,12 +309,13 @@
             and pursue a long-term academic career.
           </p>
           <ul class="profile-links" aria-label="Professional profiles">
-            <li><a href="https://orcid.org/0000-0003-1596-5465" target="_blank" rel="noopener">ORCID</a></li>
-            <li><a href="https://cv.hal.science/anh-tuan-le" target="_blank" rel="noopener">French Open Archive</a></li>
-            <li><a href="https://www.researchgate.net/profile/Anh-Tuan-Le-8" target="_blank" rel="noopener">ResearchGate</a></li>
-            <li><a href="https://www.linkedin.com/in/anh-tuan-le/" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="./2026-11-11-CV-ATL.pdf" download="2026-11-11-CV-ATL.pdf">Download CV (PDF)</a></li>
+            <li><a href="https://orcid.org/0000-0003-1596-5465" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><iconify-icon icon="academicons:orcid" aria-hidden="true"></iconify-icon></a></li>
+            <li><a href="https://cv.hal.science/anh-tuan-le" target="_blank" rel="noopener" aria-label="HAL Open Archive" title="HAL Open Archive"><iconify-icon icon="academicons:hal" aria-hidden="true"></iconify-icon></a></li>
+            <li><a href="https://scholar.google.com/citations?user=AHBblVUAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><iconify-icon icon="academicons:google-scholar" aria-hidden="true"></iconify-icon></a></li>
+            <li><a href="https://www.researchgate.net/profile/Anh-Tuan-Le-8" target="_blank" rel="noopener" aria-label="ResearchGate" title="ResearchGate"><iconify-icon icon="simple-icons:researchgate" aria-hidden="true"></iconify-icon></a></li>
+            <li><a href="https://www.linkedin.com/in/anh-tuan-le/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><iconify-icon icon="simple-icons:linkedin" aria-hidden="true"></iconify-icon></a></li>
           </ul>
+          <p class="cv-link"><a href="./2026-11-11-CV-ATL.pdf" target="_blank" rel="noopener">Download CV <iconify-icon icon="lucide:download" aria-hidden="true"></iconify-icon></a></p>
         </div>
         <div class="hero-portrait">
           <img class="hero-photo" src="./2020-03-13-belle-photo-changee-capturee.PNG"
