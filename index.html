@@ -131,11 +131,13 @@
 
     h1 {
       margin: .4rem 0 1rem;
-      font: 600 clamp(2.6rem, 6vw, 5rem)/1.08 "Times New Roman", serif;
+      font: 700 clamp(2.6rem, 6vw, 5rem)/1.08 "Cabin Sketch", "Times New Roman", serif;
       letter-spacing: -.04em;
     }
 
     .intro { max-width: 64ch; }
+    .intro, .card p:not(.eyebrow), #background > div > p, #teaching .detail,
+    .thesis-panel > p:not(.eyebrow):not(.item-links) { text-align: justify; }
     .intro + .intro { margin-top: .75rem; }
 
     .profile-links {
@@ -144,7 +146,21 @@
       font-weight: 700;
     }
 
+    .profile-links li { display: inline-flex; align-items: center; gap: .7rem; }
+    .profile-links li + li::before {
+      content: "";
+      width: .25rem;
+      height: .25rem;
+      flex: none;
+      background: var(--muted);
+    }
     .profile-links a { display: inline-flex; align-items: center; font-size: 1.35rem; }
+    .profile-links .hal-link {
+      padding: .3rem;
+      border: 1px solid var(--accent);
+      border-radius: .25rem;
+      font-size: 1.6rem;
+    }
     .cv-link { margin-top: .6rem; font-size: .9rem; font-weight: 700; }
     .cv-link a { display: inline-flex; align-items: center; gap: .35rem; }
 
@@ -257,6 +273,7 @@
 
     .thesis-panel p + p { margin-top: .75rem; }
     .site-footer { color: var(--muted); font-size: .9rem; }
+    .site-note { padding-bottom: 1rem; font: .8rem/1.4 "Times New Roman", serif; text-align: center; }
 
     @media (max-width: 48rem) {
       .hero-inner, .section { grid-template-columns: 1fr; }
@@ -270,6 +287,7 @@
       .nav-links { column-gap: .85rem; }
     }
   </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap">
   <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js" defer></script>
 </head>
 
@@ -278,7 +296,7 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="#top">Anh Tuan LE</a>
+      <a class="brand" href="https://le-anhtuan.github.io/">Anh Tuan LE</a>
       <nav aria-label="Main navigation">
         <ul class="nav-links">
           <li><a href="#research">Research</a></li>
@@ -309,11 +327,13 @@
             and pursue a long-term academic career.
           </p>
           <ul class="profile-links" aria-label="Professional profiles">
+            <li><a class="hal-link" href="https://cv.hal.science/anh-tuan-le" target="_blank" rel="noopener" aria-label="HAL Open Archive" title="HAL Open Archive"><iconify-icon icon="academicons:hal" aria-hidden="true"></iconify-icon></a></li>
             <li><a href="https://orcid.org/0000-0003-1596-5465" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><iconify-icon icon="academicons:orcid" aria-hidden="true"></iconify-icon></a></li>
-            <li><a href="https://cv.hal.science/anh-tuan-le" target="_blank" rel="noopener" aria-label="HAL Open Archive" title="HAL Open Archive"><iconify-icon icon="academicons:hal" aria-hidden="true"></iconify-icon></a></li>
             <li><a href="https://scholar.google.com/citations?user=AHBblVUAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><iconify-icon icon="academicons:google-scholar" aria-hidden="true"></iconify-icon></a></li>
             <li><a href="https://www.researchgate.net/profile/Anh-Tuan-Le-8" target="_blank" rel="noopener" aria-label="ResearchGate" title="ResearchGate"><iconify-icon icon="simple-icons:researchgate" aria-hidden="true"></iconify-icon></a></li>
+            <li><a href="https://www.scopus.com/authid/detail.uri?authorId=58197209700" target="_blank" rel="noopener" aria-label="Scopus" title="Scopus"><iconify-icon icon="academicons:scopus" aria-hidden="true"></iconify-icon></a></li>
             <li><a href="https://www.linkedin.com/in/anh-tuan-le/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><iconify-icon icon="simple-icons:linkedin" aria-hidden="true"></iconify-icon></a></li>
+            <li><a href="https://github.com/le-anhtuan" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><iconify-icon icon="simple-icons:github" aria-hidden="true"></iconify-icon></a></li>
           </ul>
           <p class="cv-link"><a href="./2026-11-11-CV-ATL.pdf" target="_blank" rel="noopener">Download CV <iconify-icon icon="lucide:download" aria-hidden="true"></iconify-icon></a></p>
         </div>
@@ -558,6 +578,7 @@
       <p>Anh Tuan LE</p>
       <a href="#top">Back to top ↑</a>
     </div>
+    <p class="site-note wrap">This site was designed with the help of AI agents. The author reviewed the content for factual accuracy.</p>
   </footer>
 </body>
 </html>
